@@ -18,7 +18,7 @@
          <div class="heading">
              <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
              <br>
-             <h2>To change websites quickly, press the CAPS LOCK button</h2>
+             <h2>To delete the tabs quickly, press the CAPS LOCK button</h2>
          </div>
         <br>
         <div class="jajajamanin">
@@ -205,8 +205,10 @@
         </script>
         <script>
             document.addEventListener('keydown', function (event) {
+                // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
                 if (event.getModifierState('CapsLock') || event.keyCode === 20) {
-                    window.location.href = 'https://smartrevise.online/student/home/Index';
+                    // Delete the current tab when Caps Lock is pressed
+                    window.close();
                 }
             });
         </script>
