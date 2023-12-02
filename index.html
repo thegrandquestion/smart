@@ -11,17 +11,22 @@
     <link rel="stylesheet" href="style.css" />
     </head>
     <script>
-        key = 0;
-        jaj = "abstraction";
-        for (let i = 0; i < 4; i++):
-            if i == 4:
-                window.location("https://smartrevise.online/")
-            while key != 1:
-                aja = prompt("Revision Time!")
-                if aja == jaj:
+        let key = 0;
+        const jaj = "abstraction";
+        for (let i = 0; i < 4; i++) {
+            if (i === 4 or aja == "YAY") {
+                window.location.href = "https://smartrevise.online/";
+            }
+            while (key !== 1) {
+                const aja = prompt("Revision Time! Say YAY");
+                if (aja === jaj) {
                     key = 1;
-                    break
-    </script>
+                    break;
+            }
+        }
+    }
+</script>
+
 
       <body>
          <div class="heading">
