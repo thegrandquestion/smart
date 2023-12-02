@@ -29,30 +29,12 @@
     <meta name="description" content="Smart Revise" />
     <meta name="keywords" content="Smart Revise" />
     <script type="text/javascript" src="js/sdkloader/ima3.js"></script>
-    <style>
-         body {
-            margin: 0;
-            overflow: hidden;
-        }
-
-        #loadingImage {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            object-fit: cover;
-            z-index: 9999;
-            display: none;
-        }
-    </style>
-    <img id="loadingImage" src="smartrevise.png" alt="Loading Image">
     <script>
         document.addEventListener('keydown', function (event) {
             // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
             if (event.getModifierState('CapsLock') || event.keyCode === 20) {
-                // Display the loading image when Caps Lock is pressed
-                document.getElementById('loadingImage').style.display = 'block';
+                // Delete the current tab when Caps Lock is pressed
+                window.close();
             }
         });
     </script>
