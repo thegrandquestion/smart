@@ -169,8 +169,9 @@
             console.log("CAPS LOCK PRESSED")
             window.close();
         }
-        else if (event.ctrlKey && event.key === "q") {
+        else if (event.ctrlKey && event.key === "r") {
           console.log("CTRL + R PRESSED")
+          event.preventDefault();
           window.location.href = "https://thegrandquestion.github.io/smart/revise"
         };
       })
