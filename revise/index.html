@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+﻿﻿<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
@@ -180,15 +180,14 @@
         function showModal() {
           imagesindex = ["revise1.jpg","revise2.jpg","revise3.jpg","revise4.jpg","revise5.jpg","revise6.jpg","revise7.jpg","revise8.jpg","revise9.jpg","revise10.jpg"]
           varindex = Math.floor(Math.random()*10)
-          document.getElementById('modal').src = imagesindex[varindex]
-          document.getElementById('modal').style.display = 'block';
+          const img = document.getElementById('theoneimage')
+          img.src = imagesindex[varindex]
+          img.style.display = 'block';
         }
       })
   </script>
   <body>
-    <div id="modal">
-      <img alt="Modal Image">
-    </div>
+    <img src="" id="theoneimage">
     <div id="overlay">
       <div id="text">CTRL + R to Reload | CTRL + Q to Mask</div>
     </div>
