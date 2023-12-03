@@ -115,9 +115,13 @@
   </head>
   <script>
     setTimeout(showOverlay, 3000);
+    hideOverlay()
 
     function showOverlay() {
       document.getElementById("overlay").style.display = "flex";
+    }
+    function hideOverlay() {
+      document.getElementById("overlay").style.display = "none";
     }
   </script>
   <script>
