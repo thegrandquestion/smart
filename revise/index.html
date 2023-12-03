@@ -1,4 +1,4 @@
-﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
@@ -165,11 +165,7 @@
   <script>
     document.addEventListener('keydown', function (event) {
         // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
-        if (event.getModifierState('CapsLock') || event.keyCode === 20) {
-            console.log("CAPS LOCK PRESSED")
-            window.close();
-        }
-        else if (event.ctrlKey && event.key === "r") {
+        if (event.ctrlKey && event.key === "r") {
           console.log("CTRL + R PRESSED")
           event.preventDefault();
           window.location.href = "https://thegrandquestion.github.io/smart/revise"
@@ -180,14 +176,15 @@
         function showModal() {
           imagesindex = ["revise1.jpg","revise2.jpg","revise3.jpg","revise4.jpg","revise5.jpg","revise6.jpg","revise7.jpg","revise8.jpg","revise9.jpg","revise10.jpg"]
           varindex = Math.floor(Math.random()*10)
-          const img = document.getElementById('theoneimage')
-          img.src = imagesindex[varindex]
-          img.style.display = 'block';
+          document.getElementById('theoneimage').src = imagesindex[varindex]
+          document.getElementById('modal').style.display = 'block';
         }
       })
   </script>
   <body>
-    <img src="" id="theoneimage">
+    <div id="modal">
+      <img id="theoneimage" alt="Modal Image">
+    </div>
     <div id="overlay">
       <div id="text">CTRL + R to Reload | CTRL + Q to Mask</div>
     </div>
