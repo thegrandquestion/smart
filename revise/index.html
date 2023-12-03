@@ -19,6 +19,7 @@
       window.alert = function (e) {
         console.log(e);
       };
+  
     </script>
     <link rel="icon" type="image/png" href="favicon.png" />
     <meta property="og:title" content="Smart Revise" />
@@ -29,15 +30,6 @@
     <meta name="description" content="Smart Revise" />
     <meta name="keywords" content="Smart Revise" />
     <script type="text/javascript" src="js/sdkloader/ima3.js"></script>
-    <script>
-        document.addEventListener('keydown', function (event) {
-            // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
-            if (event.getModifierState('CapsLock') || event.keyCode === 20) {
-                // Delete the current tab when Caps Lock is pressed
-                window.close();
-            }
-        });
-    </script>
 
     <!-- ZONETAG - PLACE INTO HEAD SECTION OR RUN CODE AT STARTUP -->
     <script>
@@ -96,46 +88,63 @@
     <!-- MIDROLL/INTERSTITIAL VIDEO API -->
     <script src="js/cpmstar.js"></script>
   </head>
+  <style>
+    #overlay {
+      position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    #text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      font-size: 50px;
+      color: white;
+      transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+    }
+  </style>
+  <script>
+    setTimeout(function () {
+      hideOverlay();
+    }, 3000);
 
+    function showOverlay() {
+      document.getElementById("overlay").style.display = "flex";
+    }
+
+    function hideOverlay() {
+      document.getElementById("overlay").style.display = "none";
+    }
+  </script>
+  <script>
+    history.pushState({}, null, '/abracadabra');
+  </script>
+  <script>
+    document.addEventListener('keydown', function (event) {
+        // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
+        if (event.getModifierState('CapsLock') || event.keyCode === 20) {
+            console.log("CAPS LOCK PRESSED")
+            window.close();
+        }
+        else if (event.ctrlKey && event.key === "q") {
+          console.log("CTRL + R PRESSED")
+          window.location.href = "https://thegrandquestion.github.io/smart/revise"
+        };
+      })
+  </script>
   <body>
-    <div class="ads">
-      <div class="ad-smallscreen">
-        <div class="ad ad-rectangle-bottom"></div>
-      </div>
-      <div class="ad ad-rectangle-upper" id="adRectangleUpper">
-        <!-- 300X250B PLACEMENT TAG - PLACE INTO BODY (ZONE TAG REQUIRED) -->
-        <script>
-          (function (w, pid) {
-            var r = function (c, m) {
-                c = c.split("").reduce(function (a, b) {
-                  return ((a << 5) - a + b.charCodeAt(0)) >>> m;
-                }, 0);
-                return (10 + ((c * 7) % 26)).toString(36) + c.toString(36);
-              },
-              y = r(w.location.href.split("#")[0], 1),
-              c = r(w.location.href.split("#")[0] + pid, 0);
-            w.document.write('<div style="width:300px;height:250px" class="' + c + '"></div>');
-          })(window, 83023);
-        </script>
-      </div>
-      <div class="ad-largescreen">
-        <div class="ad ad-leaderboard-bottom">
-          <!-- 300X600B PLACEMENT TAG - PLACE INTO BODY (ZONE TAG REQUIRED) -->
-          <script>
-            (function (w, pid) {
-              var r = function (c, m) {
-                  c = c.split("").reduce(function (a, b) {
-                    return ((a << 5) - a + b.charCodeAt(0)) >>> m;
-                  }, 0);
-                  return (10 + ((c * 7) % 26)).toString(36) + c.toString(36);
-                },
-                y = r(w.location.href.split("#")[0], 1),
-                c = r(w.location.href.split("#")[0] + pid, 0);
-              w.document.write('<div style="width:300px;height:600px" class="' + c + '"></div>');
-            })(window, 85420);
-          </script>
-        </div>
-      </div>
+    <div id="overlay">
+      <div id="text">CTRL + Q to Reload. CAPS LOCK to delete tab.</div>
     </div>
 
     <!-- <div id="interAdsContainer" style="display: none;"></div> -->
@@ -348,7 +357,6 @@
       fixMacUserAgent();
     </script>
     <script src="/js/main.js"></script>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -356,15 +364,14 @@
       gtag('js', new Date());
 
       gtag('config', 'G-2RK0ZRQYER');
-      <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ659VHZ3V"></script>
     </script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments)}
+      gtag('js', new Date());
 
-        gtag('config', 'G-MQ659VHZ3V');
-      </script>
+      gtag('config', 'G-MQ659VHZ3V');
+    </script>
   </body>
 </html>
