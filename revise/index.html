@@ -1,6 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="en-us">
   <head>
+      <style>
+        #overlay {
+          position: fixed;
+          display: none;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,0.5);
+          z-index: 2;
+          cursor: pointer;
+        }
+    
+        #text{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          font-size: 50px;
+          color: white;
+          transform: translate(-50%,-50%);
+          -ms-transform: translate(-50%,-50%);
+        }
+      </style>
     <meta charset="utf-8" />
     <title>Smart Revise Online Home - Smart Revise</title>
     <script src="js/googleAnalytics.js"></script>
@@ -88,31 +113,6 @@
     <!-- MIDROLL/INTERSTITIAL VIDEO API -->
     <script src="js/cpmstar.js"></script>
   </head>
-  <style>
-    #overlay {
-      position: fixed;
-      display: none;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: rgba(0,0,0,0.5);
-      z-index: 2;
-      cursor: pointer;
-    }
-    
-    #text{
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      font-size: 50px;
-      color: white;
-      transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-    }
-  </style>
   <script>
     setTimeout(function () {
       hideOverlay();
