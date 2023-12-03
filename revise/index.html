@@ -152,7 +152,7 @@
     <script src="js/cpmstar.js"></script>
   </head>
   <script>
-    setTimeout(showOverlay, 2500);
+    setTimeout(showOverlay, 1);
     setTimeout(hideOverlay, 4000);
 
     function showOverlay() {
@@ -173,7 +173,13 @@
           console.log("CTRL + R PRESSED")
           event.preventDefault();
           window.location.href = "https://thegrandquestion.github.io/smart/revise"
-        };
+        }
+        else if (event.ctrlKey && event.key === 'q') { 
+          showModal();
+        }
+        function showModal() {
+          document.getElementById('modal').style.display = 'block';
+        }
       })
   </script>
   <body>
@@ -394,18 +400,6 @@
       fixMacUserAgent();
     </script>
     <script src="/js/main.js"></script>
-    <script>
-      document.addEventListener('keydown', function (event) {
-          // Check if CTRL + R is pressed
-          if (event.ctrlKey && event.key === 'q') { 
-              showModal();
-          }
-      });
-  
-      function showModal() {
-          document.getElementById('modal').style.display = 'block';
-      }
-    </script>
     <script>
       history.pushState({}, null, '/abracadabra');
     </script>
