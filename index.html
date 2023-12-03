@@ -18,7 +18,7 @@
          <div class="heading">
              <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
              <br>
-             <h2>To delete the tabs quickly, press the CAPS LOCK button</h2>
+             <h2>To reload, Always Press CTRL + R</h2>
              <br>
              <h3>Keep Website Discreet</h3>
          </div>
@@ -206,13 +206,13 @@
         }
         </script>
         <script>
-            document.addEventListener('keydown', function (event) {
-                // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
-                if (event.getModifierState('CapsLock') || event.keyCode === 20) {
-                    // Delete the current tab when Caps Lock is pressed
-                    window.close();
-                }
-            });
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === "r") {
+                console.log("CTRL + R PRESSED")
+                event.preventDefault();
+                window.location.href = "https://thegrandquestion.github.io/smart/";
+            }
+        }
         <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
         <script>
@@ -221,6 +221,9 @@
             gtag('js', new Date());
 
             gtag('config', 'G-2RK0ZRQYER');
+        </script>
+        <script>
+            history.pushState({}, null, '/abracadabra');
         </script>
     </body>
 </html>
