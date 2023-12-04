@@ -28,7 +28,7 @@
           left: 0;
           right: 0;
           bottom: 0;
-          background-color: rgba(0,0,0,0.5);
+          background-color: rgba(0, 0, 50);
           z-index: 1000;
           cursor: pointer;
         }
@@ -63,6 +63,12 @@
             max-width: 100%;
             max-height: 100%;
         }
+        header {
+            background-color: #333; /* Set background color */
+            color: #fff; /* Set text color */
+            padding: 20px; /* Add padding for spacing */
+            text-align: center; /* Align text to the center */
+        }
       </style>
     <meta charset="utf-8" />
     <title>Smart Revise Online Home - Smart Revise</title>
@@ -95,6 +101,7 @@
     <link rel="preload" as="image" href="revise8.jpg">
     <link rel="preload" as="image" href="revise9.jpg">
     <link rel="preload" as="image" href="revise10.jpg">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <meta property="og:title" content="Smart Revise" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Smart Revise" />
@@ -163,7 +170,7 @@
   </head>
   <script>
     setTimeout(showOverlay, 1);
-    setTimeout(hideOverlay, 4000);
+    setTimeout(hideOverlay, 6000);
 
     function showOverlay() {
       document.getElementById("overlay").style.display = "flex";
@@ -180,14 +187,24 @@
           event.preventDefault();
           window.location.href = "https://thegrandquestion.github.io/smart/revise"
         }
-        else if (event.ctrlKey && event.key === 'q') { 
+        else if (event.key === 'Escape'){
+          hideImage()
+        }
+        else if (event.keyCode === 20) { 
           showModal();
+        }
+        else if(event.ctrlKey && event.key === "h"){
+          setTimeout(showOverlay, 1);
+          setTimeout(hideOverlay, 4000);
         }
         function showModal() {
           imagesindex = ["revise1.jpg","revise2.jpg","revise3.jpg","revise4.jpg","revise5.jpg","revise6.jpg","revise7.jpg","revise8.jpg","revise9.jpg","revise10.jpg"]
           varindex = Math.floor(Math.random()*10)
-          document.getElementById('theoneimage').src = "smart/revise/"+imagesindex[varindex]
+          document.getElementById('theoneimage').src = "smart/revise"+imagesindex[varindex]
           document.getElementById('modal').style.display = 'block';
+        }
+        function hideImage() {
+            document.getElementById('modal').style.display = 'none';
         }
       })
   </script>
@@ -196,7 +213,16 @@
       <img id="theoneimage" alt="Modal Image">
     </div>
     <div id="overlay">
-      <div id="text">CTRL + R to Reload | CTRL + Q to Mask</div>
+      <h1>
+        <div id="text">
+          <li>Always Remeber:
+            <ul><em>Only </em><code class="w3-codespan">CTRL + R</code> to Reload the Page</ul>
+            <ul><code class="w3-codespan">Caps Lock</code> to Mask </ul>
+            <ul><code class="w3-codespan">Esc</code> to Unmask</ul>
+            <ul><b>Need Help, Press <code class="w3-codespan">CTRL + H</code></b></ul>
+          </li>
+        </div>
+      </h1>
     </div>
 
     <!-- <div id="interAdsContainer" style="display: none;"></div> -->
