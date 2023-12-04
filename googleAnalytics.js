@@ -1,7 +1,7 @@
 key = ""
 const jaj = ["IZ|I|I|I","MZ|I|I|I","IH|I|I|I","SH|I|I|I","IQ|I|I|I"]
 const weird = "MASTERKEY";
-function href(){
+function verify(){
     const aja = prompt("Revision Time! Say YAY")
     for (let i = 0; i < jaj.length; i++) {;
         if (aja == "YAY") {
