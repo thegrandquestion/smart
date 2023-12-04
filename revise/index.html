@@ -180,6 +180,9 @@
     }
   </script>
   <script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
     document.addEventListener('keydown', function (event) {
         // Check if Caps Lock is pressed (keyCode 20 or key 'CapsLock')
         if (event.ctrlKey && event.key === "r") {
