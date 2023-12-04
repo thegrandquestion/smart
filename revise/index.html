@@ -170,7 +170,7 @@
   </head>
   <script>
     setTimeout(showOverlay, 1);
-    setTimeout(hideOverlay, 6000);
+    setTimeout(hideOverlay, 3000);
 
     function showOverlay() {
       document.getElementById("overlay").style.display = "flex";
@@ -195,7 +195,6 @@
         }
         else if(event.ctrlKey && event.key === "h"){
           setTimeout(showOverlay, 1);
-          setTimeout(hideOverlay, 4000);
         }
         function showModal() {
           imagesindex = ["revise1.jpg","revise2.jpg","revise3.jpg","revise4.jpg","revise5.jpg","revise6.jpg","revise7.jpg","revise8.jpg","revise9.jpg","revise10.jpg"]
@@ -215,11 +214,12 @@
     <div id="overlay">
       <h1>
         <div id="text">
+          <button id="close-button" onclick="hideOverlay()">&times;</button>
           <li>Always Remeber:
-            <ul><em>Only </em><code class="w3-codespan">CTRL + R</code> to Reload the Page</ul>
-            <ul><code class="w3-codespan">Caps Lock</code> to Mask </ul>
-            <ul><code class="w3-codespan">Esc</code> to Unmask</ul>
-            <ul><b>Need Help, Press <code class="w3-codespan">CTRL + H</code></b></ul>
+            <ul><h1 style="font-size: 100px"><b>To <u>See Again</u>, Press <code class="w3-codespan">CTRL + H</code></b></h1></ul>
+            <ul><em>Only </em><code class="w3-codespan">CTRL + R</code> to <u>Reload the Page</u></ul>
+            <ul><code class="w3-codespan">Caps Lock</code> <u>to Mask</u></ul>
+            <ul><code class="w3-codespan">Esc</code> <u>to Unmask</u></ul>
           </li>
         </div>
       </h1>
