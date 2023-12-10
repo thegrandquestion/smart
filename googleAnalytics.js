@@ -19,3 +19,22 @@ function verify(){
         }
     }
 }
+const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+function rot13(str) {
+  let strArray = str.split("")
+  console.log(strArray.join(""))
+  for (let i = 0; i < strArray.length;i++){
+    for (let a = 0;a < alphabet.length;a++){
+      if (strArray[i] == alphabet[a] ){
+        let abc = a + 13
+        if (abc > 25){
+          let rem = abc % 26
+          abc = rem
+        }
+        strArray[i] = alphabet[abc]
+        break;
+      }
+    }
+  }
+  return strArray.join("");
+}
