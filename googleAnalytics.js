@@ -1,6 +1,5 @@
 key = ""
 const jaj = ["RA|I|I|I","Ijaz2036","MZ|I|I|I","IH|I|I|I","SH|I|I|I","IQ|I|I|I","TahseensBalls"]
-const weird = "MASTERKEY";
 function verify(){
     const aja = prompt("Revision Time! Say YAY")
     for (let i = 0; i < jaj.length; i++) {;
@@ -10,7 +9,7 @@ function verify(){
         }
         if (aja === jaj[i]) {
             return "smart/revise?pass"+jaj[i]
-        } else if (aja === weird){
+        } else if (aja === "MASTERKEY"){
             document.getElementById("hiddenLinks").style.visibility = "visible";
             return "smart/revise?pass"+jaj[i]
         } else {
