@@ -2,6 +2,7 @@
 <html lang="en-us">
   <head>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
+    <script src="../googleAnalytics.js"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -9,7 +10,28 @@
 
       gtag('config', 'G-2RK0ZRQYER');
     </script>
-    
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const queryValue = urlParams.get('query');
+      m = 0
+      const queryString = window.location.search;
+      const queryParams = new URLSearchParams(queryString);
+      if (queryParams.has("query")) {
+        for (var i of allowed){
+          m += 1
+          if (rotMinus13(queryValue) === allowed) {
+            break
+          }
+          else {
+            if (m === allowed.length || queryValue === null){
+              window.location = "https://smartrevise.online/Account/Login?ReturnUrl=%2FAccount%2FPostRegisterFix"
+            }
+          }
+        }
+      } else {
+        window.location = "https://smartrevise.online/Account/Login?ReturnUrl=%2FAccount%2FPostRegisterFix"
+      }
+    </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ659VHZ3V"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
