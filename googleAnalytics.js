@@ -41,26 +41,3 @@ function rot13(str) {
   }
   return strArray.join("");
 }
-function rotMinus13(str) {
-  let strArray = str.split("");
-
-  for (let i = 0; i < strArray.length; i++) {
-    strArray[i] = strArray[i].toUpperCase();
-  }
-
-  for (let i = 0; i < strArray.length; i++) {
-    for (let a = 0; a < alphabet.length; a++) {
-      if (strArray[i] == alphabet[a]) {
-        let abc = a - 13; // Change the rotation value to -13
-        if (abc < 0) {
-          let rem = (abc + 36) % 36; // Adjust for negative values
-          abc = rem;
-        }
-        strArray[i] = alphabet[abc];
-        break;
-      }
-    }
-  }
-
-  return strArray.join("");
-}
