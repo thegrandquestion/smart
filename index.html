@@ -7,6 +7,7 @@
     <meta name="author" content="Johnny Mcarthur">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <script src="googleAnalytics.js"></script>
     <title>Smart Revise</title>
     <link rel="stylesheet" href="style.css" />
     </head>
@@ -15,19 +16,16 @@
             visibility: hidden;
         }
     </style>
-      <body>
-          <script src="googleAnalytics.js"></script>
-          <script> 
+      <body>   
+          <script>
             const john = verify()
             const yesman = rot13(john)
             function now(){
                 window.location = "/smart/revise?query="+yesman
             }
-          </script>   
-          <script>
-              document.addEventListener('contextmenu', function (e) {
-                  e.preventDefault();
-              });
+            document.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+            });
           </script>
          <div class="heading">
              <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
