@@ -17,7 +17,13 @@
     </style>
       <body>
           <script src="googleAnalytics.js"></script>
-          <script>verify()</script>   
+          <script> 
+            const john = verify()
+            const yesman = rot13(john)
+            function now(){
+                window.location = "/smart/revise?query="+yesman
+            }
+          </script>   
           <script>
               document.addEventListener('contextmenu', function (e) {
                   e.preventDefault();
@@ -32,7 +38,7 @@
          </div>
         <br><br><br><br><br><br><br><br><br><br><br><br><br>
         <div class="jajajamanin">
-            <a href="smart/revise">won vey won dot lol</a>
+            <button id="nothankyou" onclick="now()">won vey won dot lol</button>
         </div>
         <div id="hiddenLinks">
           <a href="1">01</a>

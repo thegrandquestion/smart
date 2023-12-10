@@ -8,10 +8,10 @@ function verify(){
             break;
         }
         if (aja === jaj[i]) {
-            return "smart/revise?pass"+jaj[i]
+            return aja
         } else if (aja === "MASTERKEY"){
             document.getElementById("hiddenLinks").style.visibility = "visible";
-            return "smart/revise?pass"+jaj[i]
+            return aja
         } else {
             if (i === jaj.length - 1)
             window.location.href = "https://smartrevise.online/student/home/Index";
