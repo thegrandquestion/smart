@@ -41,3 +41,10 @@ function rot13(str) {
   }
   return strArray.join("");
 }
+function respond(user){
+  for (let i = 0; i < allowed.length; i++){
+    if (user === allowed[i]){
+      return i
+    }
+  }
+}

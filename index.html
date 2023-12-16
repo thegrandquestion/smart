@@ -29,8 +29,9 @@
                 document.cookie = cookieString;
             }
             setCookie("ThanksMan",yesman, 1)
+            setCookie("UserID",respond(john),1)
             function now(){
-                window.location = "/smart/revise/";
+                window.location = "/smart/revise/?UserID="+respond(john);
             }
             document.addEventListener('contextmenu', function (e) {
                 e.preventDefault();
@@ -216,7 +217,7 @@
                 window.location.href = "https://thegrandquestion.github.io/smart/";
             }
             else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                event.preventDefault();
+                //event.preventDefault();
             }
         })
         <!-- Google tag (gtag.js) -->
