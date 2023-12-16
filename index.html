@@ -7,19 +7,87 @@
     <meta name="author" content="Johnny Mcarthur">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <script src="googleAnalytics.js"></script>
     <title>Smart Revise</title>
     <link rel="stylesheet" href="style.css" />
     </head>
     <style>
-        #hiddenLinks {
-            visibility: hidden;
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('themountain.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;    
+            color: white;
+            overflow-y: scroll; /* Enable scrolling */
+            scrollbar-width: 1px; /* Firefox */
+            -webkit-scrollbar-width: thin; /* Webkit (Chrome, Safari, etc.) */
+        }
+
+        body::-webkit-scrollbar {
+            width: 1px; /* Width of the scrollbar */
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: white; /* Color of the thumb */
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 10px;
+        }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        button {
+            height: 100px;
+            width: 500px;
+            background-color: transparent;
+            color: white;
+            border-radius: 50px;
+            margin-bottom: 100px; /* Adjust the margin to create space between the buttons */
+            font-weight: bold; /* Adjust the font-weight to make the text thicker */
+            padding: 10px 20px; /* Add padding to the button for better visual appearance */
+        }
+        button:hover {
+            color: black;
+            background-color: rgb(255, 255, 255);
+        }
+        .heading {
+            font-family: 'Montserrat', cursive;
         }
     </style>
-      <body>   
-          <script>
-            const john = verify()
-            const yesman = rot13(john)
+    <body>
+        <div class="heading">
+            <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
+            <br>
+            <h2>To reload, Always Press CTRL + R</h2>
+            <br>
+            <h3>Keep Website Discreet</h3>
+        </div>
+       <br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <div class="button-container">
+           <button id="nothankyou" onclick="now('revise')"><h1>One On One</h1></button>
+           <button id="nothankyou" onclick="now('mine')"><h1>Mine And Craft</h1></button>
+           <button id="nothankyou" onclick="now('flappybird.old')"><h1>Jumpy Bird</h1></button>
+       </div>
+    </body>
+        <script>
+            const john = verify();
+            const yesman = rot13(john);
             function setCookie(name, value, daysToExpire) {
                 var expirationDate = new Date();
                 expirationDate.setDate(expirationDate.getDate() + daysToExpire);
@@ -30,197 +98,22 @@
             }
             setCookie("ThanksMan",yesman, 1)
             setCookie("UserID",respond(john),1)
-            function now(){
-                window.location = "/smart/revise/?UserID="+respond(john);
+            function now(landing){
+                window.location = "/smart/"+landing+"/?UserID="+respond(john);
             }
             document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
+                //e.preventDefault();
             });
-          </script>
-         <div class="heading">
-             <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
-             <br>
-             <h2>To reload, Always Press CTRL + R</h2>
-             <br>
-             <h3>Keep Website Discreet</h3>
-         </div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br>
-        <div class="jajajamanin">
-            <button id="nothankyou" onclick="now()">won vey won dot lol</button>
-        </div>
-        <div id="hiddenLinks">
-          <a href="1">01</a>
-          <br><br>
-          <a href="smart/10minutestilldawn">0</a>
-          <br><br>
-          <a href="smart/2048">1</a>
-          <br><br>
-          <a href="smart/adanceoffireandice">2</a>
-          <br><br>
-          <a href="smart/adarkroom">3</a>
-          <br><br>
-          <a href="smart/adrenalinechallenge">4</a>
-          <br><br>
-          <a href="smart/adventuredrivers">5</a>
-          <br><br>
-          <a href="smart/asteroids">6</a>
-          <br><br>
-          <a href="smart/astray">7</a>
-          <br><br>
-          <a href="backcountry">8</a>
-          <br><br>
-          <a href="badicecream">9</a>
-          <br><br>
-          <a href="badicecream2">10</a>
-          <br><br>
-          <a href="badicecream3">11</a>
-          <br><br>
-          <a href="basketrandom">12/a>
-          <br><br>
-          <a href="bitlife">13</a>
-          <br><br>
-          <a href="bounceback">14</a>
-          <br><br>
-          <a href="boxingrandom">15</a>
-          <br><br>
-          <a href="breaklock">16</a>
-          <br><br>
-          <a href="breakout">17</a>
-          <br><br>
-          <a href="chess">18</a>
-          <br><br>
-          <a href="chromedino">19</a>
-          <br><br>
-          <a href="connect3">20</a>
-          <br><br>
-          <a href="cookieclicker">21</a>
-          <br><br>
-          <a href="cubefield">22</a>
-          <br><br>
-          <a href="doodlejump">23</a>
-          <br><br>
-          <a href="ducklife">24</a>
-          <br><br>
-          <a href="ducklife2">25</a>
-          <br><br>
-          <a href="ducklife3">26</a>
-          <br><br>
-          <a href="ducklife4">27</a>
-          <br><br>
-          <a href="edgesurf">28</a>
-          <br><br>
-          <a href="evilglitch">29</a>
-          <br><br>
-          <a href="factoryballsforever">30</a>
-          <br><br>
-          <a href="fireboyandwatergirlintheforesttemple">31</a>
-          <br><br>
-          <a href="flappybird">32</a>
-          <br><br>
-          <a href="friendlyfire">33</a>
-          <br><br>
-          <a href="geometrydash">34</a>
-          <br><br>
-          <a href="gopherkart">35</a>
-          <br><br>
-          <a href="hextris">36</a>
-          <br><br>
-          <a href="iceagebabyadventure">37</a>
-          <br><br>
-          <a href="konnekt">38</a>
-          <br><br>
-          <a href="minecraft0.30">39</a>
-          <br><br>
-          <a href="minecraft1.3">40</a>
-          <br><br>
-          <a href="minecraft1.5.2">41</a>
-          <br><br>
-          <a href="motox3m2">42</a>
-          <br><br>
-          <a href="ovo">43/a>
-          <br><br>
-          <a href="pacman">44</a>
-          <br><br>
-          <a href="pushback">45</a>
-          <br><br>
-          <a href="racer">46</a>
-          <br><br>
-          <a href="radiusraid">47</a>
-          <br><br>
-          <a href="retrobowl">488888888</a>
-          <br><br>
-          <a href="retrohaunt">49</a>
-          <br><br>
-          <a href="riddleschool">50l</a>
-          <br><br>
-          <a href="riddleschool2">52</a>
-          <br><br>
-          <a href="riddleschool3">53</a>
-          <br><br>
-          <a href="riddleschool4">54</a>
-          <br><br>
-          <a href="riddleschool5">55</a>
-          <br><br>
-          <a href="roadblocks">56</a>
-          <br><br>
-          <a href="sleepingbeauty">57</a>
-          <br><br>
-          <a href="slope">58</a>
-          <br><br>
-          <a href="snake">59</a>
-          <br><br>
-          <a href="snowrider3d">60</a>
-          <br><br>
-          <a href="soccerrandom">61</a>
-          <br><br>
-          <a href="spacecompany">62</a>
-          <br><br>
-          <a href="spaceinvaders">63</a>
-          <br><br>
-          <a href="tetris">64</a>
-          <br><br>
-          <a href="thechromaincident">65</a>
-          <br><br>
-          <a href="thereisnogame">66</a>
-          <br><br>
-          <a href="towermaster">67</a>
-          <br><br>
-          <a href="tunnelrush">68</a>
-          <br><br>
-          <a href="underrun">69</a>
-          <br><br>
-          <a href="vex3">70</a>
-          <br><br>
-          <a href="vex4">71</a>
-          <br><br>
-          <a href="vex5">72</a>
-          <br><br>
-          <a href="vex6">73</a>
-          <br><br>
-          <a href="vex7">74</a>
-          <br><br>
-          <a href="volleyrandom">75</a>
-          <br><br>
-          <a href="webretro">76</a>
-          <br><br>
-          <a href="worldshardestgame">77</a>
-          <br><br>
-          <a href="worldshardestgame2">78</a>
-          <br><br>
-          <a href="xx142b2.exe">79</a>
-        </div>
-        <script>
-        document.addEventListener('keydown', function (event) {
-            if (event.ctrlKey && event.key === "r") {
-                console.log("CTRL + R PRESSED")
-                event.preventDefault();
-                window.location.href = "https://thegrandquestion.github.io/smart/";
-            }
-            else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                event.preventDefault();
-            }
-        })
-        <!-- Google tag (gtag.js) -->
+            document.addEventListener('keydown', function (event) {
+                if (event.ctrlKey && event.key === "r") {
+                    console.log("CTRL + R PRESSED")
+                    event.preventDefault();
+                    window.location.href = "https://thegrandquestion.github.io/smart/";
+                }
+                else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+                    event.preventDefault();
+                }
+            })
         </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
         <script>
@@ -233,5 +126,4 @@
         <script>
             history.pushState({}, null, '/abracadabra');
         </script>
-    </body>
 </html>
