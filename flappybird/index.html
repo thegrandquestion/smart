@@ -35,36 +35,47 @@
 <body>
     <script src="https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/DLgXf1zr/__start__.js"></script>
     <script src="https://s3-eu-west-1.amazonaws.com/apps.playcanvas.com/DLgXf1zr/__loading__.js"></script>
-    <script>
-        function getCookieValue(cookieName) {
-          var name = cookieName + "=";
-          var decodedCookie = decodeURIComponent(document.cookie);
-          var cookieArray = decodedCookie.split(';');
-    
-          for(var i = 0; i < cookieArray.length; i++) {
-            var cookie = cookieArray[i].trim();
-            if (cookie.indexOf(name) == 0) {
-              return cookie.substring(name.length, cookie.length);
-            }
-          }
-    
-          return null;
+    <script src="../googleAnalytics.js"></script>
+  <script>
+    function getCookieValue(cookieName) {
+      var name = cookieName + "=";
+      var decodedCookie = decodeURIComponent(document.cookie);
+      var cookieArray = decodedCookie.split(';');
+
+      for(var i = 0; i < cookieArray.length; i++) {
+        var cookie = cookieArray[i].trim();
+        if (cookie.indexOf(name) == 0) {
+          return cookie.substring(name.length, cookie.length);
         }
-    
-        var yesjohn = getCookieValue("ThanksMan");
-        if (yesjohn !== null) {
-          for (let i = 0; i < allowed.length - 1; i++){
-            if (rotMinus13(yesjohn) === allowed[i]){
-              const jonay = allowed[i];
-              break
-            } 
-          } 
-          window.location = "https://smartrevise.online/student/home/Index";
-        } else {
-          window.location = "https://smartrevise.online/student/home/Index";
-        }
-    
-      </script>
+      }
+
+      return null;
+    }
+
+    var yesjohn = getCookieValue("ThanksMan");
+    if (yesjohn !== null) {
+      for (let i = 0; i < allowed.length - 1; i++){
+        console.log(allowed)
+        if (rotMinus13(yesjohn) === allowed[i]){
+          const jonay = allowed[i];
+          break
+        } 
+      } 
+      window.location = "https://smartrevise.online/student/home/Index";
+    } else {
+      window.location = "https://smartrevise.online/student/home/Index";
+    }
+
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+        event.preventDefault();
+      }
+    })
+
+  </script>
     <script>
         history.pushState({}, null, '/abracadabra');
     </script>

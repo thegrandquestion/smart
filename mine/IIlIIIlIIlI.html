@@ -12,6 +12,7 @@
     <link 
   </head>
   <body style="margin: 0px; width: 100vw; height: 100vh" id="game_frame"></body>
+  <script src="../googleAnalytics.js"></script>
   <script>
     function getCookieValue(cookieName) {
       var name = cookieName + "=";
@@ -31,6 +32,7 @@
     var yesjohn = getCookieValue("ThanksMan");
     if (yesjohn !== null) {
       for (let i = 0; i < allowed.length - 1; i++){
+        console.log(allowed)
         if (rotMinus13(yesjohn) === allowed[i]){
           const jonay = allowed[i];
           break
