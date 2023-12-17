@@ -25,7 +25,6 @@ function rot13(str) {
   for (let i = 0; i < strArray.length; i++) {
     strArray[i] = strArray[i].toUpperCase();
   }
-  console.log(strArray.join(""))
   for (let i = 0; i < strArray.length;i++){
     for (let a = 0;a < alphabet.length;a++){
       if (strArray[i] == alphabet[a] ){
