@@ -7,6 +7,11 @@
     <meta name="author" content="Johnny Mcarthur">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="preload" as="image" href="minecraftone.png">
+    <link rel="preload" as="image" href="minecrafttwo.png">
+    <link rel="preload" as="image" href="minecraftthree.jpg">
+    <link rel="preload" as="image" href="minecraftfour.png">
+    <link rel="preload" as="image" href="minecraftfive.jpg">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
@@ -18,12 +23,11 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('themountain.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             min-height: 100vh;
-            display: flex;
+            display: flex;  
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;    
@@ -62,9 +66,25 @@
             font-weight: bold; /* Adjust the font-weight to make the text thicker */
             padding: 10px 20px; /* Add padding to the button for better visual appearance */
         }
-        button:hover {
+        #johny:hover {
+            color: rgb(255, 255, 255);
+            background-image: url('oneveeone.png');
+            background-repeat: no-repeat;
+            background-size: cover; /* or contain, depending on your preference */
+        }
+        #bobby:hover {
             color: black;
             background-color: rgb(255, 255, 255);
+            background-image: url('Redwoodpng.png');
+            background-size: cover; /* or contain, depending on your preference */
+            background-repeat: no-repeat;
+        }
+        #charlie:hover {
+            color: black;
+            background-color: rgb(255, 255, 255);
+            background-size: cover; /* or contain, depending on your preference */
+            background-image: url('flappy.png');
+            background-repeat: no-repeat;
         }
         .heading {
             font-family: 'Montserrat', cursive;
@@ -80,11 +100,12 @@
         </div>
        <br><br><br><br><br><br><br><br><br><br><br><br><br>
        <div class="button-container">
-           <button id="nothankyou" onclick="now('revise')"><h1>One On One</h1></button>
-           <button id="nothankyou" onclick="now('mine')"><h1>Mine And Craft</h1></button>
-           <button id="nothankyou" onclick="now('flappybird.old')"><h1>Jumpy Bird</h1></button>
+           <button id="johny" onclick="now('revise')"><h1>One On One</h1></button>
+           <button id="bobby" onclick="now('mine')"><h1>Mine And Craft</h1></button>
+           <button id="charlie" onclick="now('flappybird')"><h1>Jumpy Bird</h1></button>
        </div>
     </body>
+
         <script>
             const john = verify();
             const yesman = rot13(john);
@@ -102,7 +123,7 @@
                 window.location = "/smart/"+landing+"/?UserID="+respond(john);
             }
             document.addEventListener('contextmenu', function (e) {
-                //e.preventDefault();
+                e.preventDefault();
             });
             document.addEventListener('keydown', function (event) {
                 if (event.ctrlKey && event.key === "r") {
@@ -122,6 +143,20 @@
             gtag('js', new Date());
 
             gtag('config', 'G-2RK0ZRQYER');
+        </script>
+        <script>
+            var images = [
+                'minecraftone.png',
+                'minecrafttwo.png',
+                'minecraftthree.jpg',
+                'mincraftfour.png',
+                'minecraftfive.jpg'
+            ];
+
+            var randomIndex = Math.floor(Math.random() * images.length);
+            var randomImage = images[randomIndex];
+            document.body.style.backgroundImage = 'url(' + randomImage + ')';
+
         </script>
         <script>
             history.pushState({}, null, '/abracadabra');
