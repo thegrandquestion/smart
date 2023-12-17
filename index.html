@@ -74,7 +74,7 @@
             cursor: pointer;
         }
         #bobby:hover {
-            color: black;
+            color: rgb(255, 255, 255);
             background-color: rgb(255, 255, 255);
             background-image: url('Redwoodpng.png');
             background-size: cover; /* or contain, depending on your preference */
@@ -82,7 +82,7 @@
             cursor: pointer;
         }
         #charlie:hover {
-            color: black;
+            color: rgb(255, 255, 255);
             background-color: rgb(255, 255, 255);
             background-size: cover; /* or contain, depending on your preference */
             background-image: url('flappy.png');
@@ -108,50 +108,49 @@
            <button id="charlie" onclick="now('flappybird')"><h1>Jumpy Bird</h1></button>
        </div>
     </body>
-        <script>
-            var images = [
-              'minecraftone.png',
-                'minecrafttwo.png',
-                'minecraftthree.jpg',
-                'minecraftfour.png',
-                'minecraftfive.jpg'
-            ];
+    <script>
+        const john = verify();
+        const yesman = rot13(john);
+        function setCookie(name, value, daysToExpire) {
+            var expirationDate = new Date();
+            expirationDate.setDate(expirationDate.getDate() + daysToExpire);
 
-            var randomIndex = Math.floor(Math.random() * images.length);
-            var randomImage = images[randomIndex];
-            document.body.style.backgroundImage = 'url(' + randomImage + ')';
-            alert(randomImage)
-        </script>
-        <script>
-            const john = verify();
-            const yesman = rot13(john);
-            function setCookie(name, value, daysToExpire) {
-                var expirationDate = new Date();
-                expirationDate.setDate(expirationDate.getDate() + daysToExpire);
+            var cookieString = name + "=" + encodeURIComponent(value) + "; expires="+ expirationDate.toUTCString() + "; path=/";
 
-                var cookieString = name + "=" + encodeURIComponent(value) + "; expires="+ expirationDate.toUTCString() + "; path=/";
-
-                document.cookie = cookieString;
+            document.cookie = cookieString;
+        }
+        setCookie("ThanksMan",yesman, 1)
+        setCookie("UserID",respond(john),1)
+        function now(landing){
+            window.location = "/smart/"+landing+"/?UserID="+respond(john);
+        }
+        document.addEventListener('contextmenu', function (e) {
+            e.preventDefault();
+        });
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.key === "r") {
+                console.log("CTRL + R PRESSED")
+                event.preventDefault();
+                window.location.href = "https://thegrandquestion.github.io/smart/";
             }
-            setCookie("ThanksMan",yesman, 1)
-            setCookie("UserID",respond(john),1)
-            function now(landing){
-                window.location = "/smart/"+landing+"/?UserID="+respond(john);
+            else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+                event.preventDefault();
             }
-            document.addEventListener('contextmenu', function (e) {
-                e.preventDefault();
-            });
-            document.addEventListener('keydown', function (event) {
-                if (event.ctrlKey && event.key === "r") {
-                    console.log("CTRL + R PRESSED")
-                    event.preventDefault();
-                    window.location.href = "https://thegrandquestion.github.io/smart/";
-                }
-                else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                    event.preventDefault();
-                }
-            })
-        </script>
+        })
+    </script>
+    <script>
+        var images = [
+            'minecraftone.png',
+            'minecrafttwo.png',
+            'minecraftthree.jpg',
+            'minecraftfour.png',
+            'minecraftfive.jpg'
+        ];
+
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+        document.body.style.backgroundImage = 'url(' + randomImage + ')';
+    </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
