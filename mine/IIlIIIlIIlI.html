@@ -39,8 +39,14 @@
       window.location = "https://smartrevise.online/student/home/Index";
     }
 
-  </script>
-  <script>
-    history.pushState({}, null, '/abracadabra');
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+        event.preventDefault();
+      }
+    })
+
   </script>
 </html>
