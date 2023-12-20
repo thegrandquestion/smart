@@ -1,6 +1,6 @@
 // googleAnalytics.js
 key = ""
-const allowed = ["RA|I|I|I","Ijaz2036","mooo","IH|I|I|I","SH|I|I|I","ifazandjohn","TahseensBalls"]
+const allowed = ["RA|I|I|I","Ijaz2036","mooo","luffey","SH|I|I|I","ifazandjohn","TahseensBalls","taws","sterling"]
 function verify(){
     const aja = prompt("Revision Time! Say YAY")
     for (let i = 0; i < allowed.length; i++) {;
