@@ -1,6 +1,6 @@
 // googleAnalytics.js
 key = ""
-const allowed = ["RA|I|I|I","Ijaz2036","mooo","luffey","SH|I|I|I","ifazandjohn","TahseensBalls","taws","sterling"]
+const allowed = ["RA|I|I|I","Ijaz2036","mooo","luffey","SH|I|I|I","ifazandjohn","TahseensBalls","tawz","alhamdulilah","guest"]
 function verify(){
     const aja = prompt("Revision Time! Say YAY")
     for (let i = 0; i < allowed.length; i++) {;
@@ -11,7 +11,6 @@ function verify(){
         if (aja === allowed[i]) {
             return aja
         } else if (aja === "MASTERKEY"){
-            document.getElementById("hiddenLinks").style.visibility = "visible";
             return aja
         } else {
             if (i === allowed.length - 1)

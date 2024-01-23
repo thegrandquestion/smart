@@ -1,116 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-    <meta charset="UTF-8">
-    <meta name="description" content="Smart Revise">
-    <meta name="keywords" content="Smart Revise">
-    <meta name="author" content="Johnny Mcarthur">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="preload" as="image" href="minecraftone.png">
-    <link rel="preload" as="image" href="minecrafttwo.png">
-    <link rel="preload" as="image" href="minecraftthree.jpg">
-    <link rel="preload" as="image" href="minecraftfour.png">
-    <link rel="preload" as="image" href="minecraftfive.jpg">
-    <link rel="preload" as="image" href="oneveeone.png">
-    <link rel="preload" as="image" href="Redwoodpng.png">
-    <link rel="preload" as="image" href="flappy.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <script src="googleAnalytics.js"></script>
-    <title>Smart Revise</title>
-    <link rel="stylesheet" href="style.css" />
+        <meta charset="UTF-8">
+        <meta name="description" content="Smart Revise">
+        <meta name="keywords" content="Smart Revise">
+        <meta name="author" content="Johnny Mcarthur">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+        <title>Smart Revise</title>
     </head>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 100vh;
-            display: flex;  
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;    
-            color: white;
-            overflow-y: scroll; /* Enable scrolling */
-            scrollbar-width: 1px; /* Firefox */
-            -webkit-scrollbar-width: thin; /* Webkit (Chrome, Safari, etc.) */
-        }
-
-        body::-webkit-scrollbar {
-            width: 1px; /* Width of the scrollbar */
-        }
-
-        body::-webkit-scrollbar-thumb {
-            background-color: white; /* Color of the thumb */
-        }
-
-        h1, h2, h3 {
-            margin-bottom: 10px;
-        }
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-        }
-
-        button {
-            height: 100px;
-            width: 500px;
-            background-color: transparent;
-            color: white;
-            border-radius: 50px;
-            margin-bottom: 100px; /* Adjust the margin to create space between the buttons */
-            font-weight: bold; /* Adjust the font-weight to make the text thicker */
-            padding: 10px 20px; /* Add padding to the button for better visual appearance */
-        }
-        #johny:hover {
-            color: rgb(255, 255, 255);
-            background-image: url('oneveeone.png');
-            background-repeat: no-repeat;
-            background-size: cover; /* or contain, depending on your preference */
-            cursor: pointer;
-        }
-        #bobby:hover {
-            color: rgb(255, 255, 255);
-            background-color: rgb(255, 255, 255);
-            background-image: url('Redwoodpng.png');
-            background-size: cover; /* or contain, depending on your preference */
-            background-repeat: no-repeat;
-            cursor: pointer;
-        }
-        #charlie:hover {
-            color: rgb(255, 255, 255);
-            background-color: rgb(255, 255, 255);
-            background-size: cover; /* or contain, depending on your preference */
-            background-image: url('flappy.png');
-            background-repeat: no-repeat;
-            cursor: pointer;
-        }
-        .heading {
-            font-family: 'Montserrat', cursive;
-        }
-    </style>
-    <body>
-        <div class="heading">
-            <h1>To show Appreciation, Donate ATOM to cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</h1>
-            <br>
-            <h2>To reload, Always Press CTRL + R</h2>
-            <br>
-            <h3>Keep Website Discreet</h3>
-        </div>
-       <br><br><br><br><br><br><br><br><br><br><br><br><br>
-       <div class="button-container">
-           <button id="johny" onclick="now('revise')"><h1>One On One</h1></button>
-           <button id="bobby" onclick="now('mine/IIlIIIlIIlI.html')"><h1>Mine And Craft</h1></button>
-           <button id="charlie" onclick="now('flappybird')"><h1>Jumpy Bird</h1></button>
-       </div>
-    </body>
     <script>
         const john = verify();
         const yesman = rot13(john);
@@ -137,32 +38,32 @@
                 window.location.href = "https://thegrandquestion.github.io/smart/";
             }
             else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                event.preventDefault();
+                //event.preventDefault();
             }
         })
     </script>
+    <style>
+        input {
+           margin-bottom: 10px;    
+        }
+    </style>
+    <div align="center">
+        <font size="7">McArthur</font><br>
+        <font size="3">cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</font>
+    </div>
+    <hr>
+    <p><a id="johny" href="javascript:now('revise')">one on one</a></p>
+    <p><a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">mine and craft</a></p>
+    <p><a id="charlie" href="javascript:now('flappybird')">jumpybird</a></p>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
     <script>
-        var images = [
-            'minecraftone.png',
-            'minecrafttwo.png',
-            'minecraftthree.jpg',
-            'minecraftfour.png',
-            'minecraftfive.jpg'
-        ];
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-        var randomIndex = Math.floor(Math.random() * images.length);
-        var randomImage = images[randomIndex];
-        document.body.style.backgroundImage = 'url(' + randomImage + ')';
+        gtag('config', 'G-2RK0ZRQYER');
     </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-2RK0ZRQYER');
-        </script>
-        <script>
-            history.pushState({}, null, '/abracadabra');
-        </script>
+    <script>
+        history.pushState({}, null, '/abracadabra');
+    </script>
 </html>
