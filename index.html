@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&display=swap" rel="stylesheet">
+        <link rel="modulepreload" href="https://unpkg.com/@splinetool/viewer@1.0.34/build/spline-viewer.js">
         <title>Smart Revise</title>
     </head>
     <script src="googleAnalytics.js"></script>
@@ -39,7 +40,7 @@
                 window.location.href = "https://thegrandquestion.github.io/smart/";
             }
             else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                //event.preventDefault();
+                event.preventDefault();
             }
         })
     </script>
@@ -47,15 +48,29 @@
         input {
            margin-bottom: 10px;    
         }
+        body {
+            overflow:hidden;
+        }
+        #bottom-right {
+          position: fixed;
+          bottom: 0;
+          right: 0;
+          padding: 10px;
+          background-color: #ffffff;
+          color: #000000;
+        }
     </style>
     <div align="center">
         <font size="7">McArthur</font><br>
-        <font size="3">cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</font>
+        <font size="3">cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</font><br>
     </div>
     <hr>
     <p><a id="johny" href="javascript:now('revise')">one on one</a></p>
     <p><a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">mine and craft</a></p>
     <p><a id="charlie" href="javascript:now('flappybird')">jumpybird</a></p>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.34/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/wIhciKNPHBd6IQ6N/scene.splinecode"></spline-viewer>
+    <font id="bottom-right" size="2"><i>The Grand Question</i></font>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2RK0ZRQYER"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
