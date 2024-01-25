@@ -7,12 +7,18 @@
         }
     </style>
     <body>
-        <h3>Brightness</h3><br>
-        <p>Alter Brightness : <code>(Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,x)</code> where x = 1 - 100</p>
+        <h1>Useful Powershell Commands</h1>
+        <hr>
         <br>
-        <h3>Volume</h3><br>
+        <p>Alter Brightness : Where x = 1 - 100, <code>(Get-WmiObject -Namespace root/WMI -Class WmiMonitorBrightnessMethods).WmiSetBrightness(1,x)</code></p>
+        <br>
         <p>Volume Up : <code>(new-object -com wscript.shell).SendKeys([char]174)</code></p>
         <p>Volume Up : <code>(new-object -com wscript.shell).SendKeys([char]175)</code></p>
         <p>Toggle Mute : <code>(new-object -com wscript.shell).SendKeys([char]173)</code></p>
+        <br>
+        <p>Download Speed: <code>function Measure-NetworkSpeed { $TestFile = 'https://ftp.sunet.se/mirror/parrotsec.org/parrot/misc/10MB.bin'; $TempFile = Join-Path -Path $env:TEMP -ChildPath 'testfile.tmp'; $SpeedMbps = (10 / (Measure-Command { (New-Object Net.WebClient).DownloadFile($TestFile, $TempFile) }).TotalSeconds) * 8; "{0:N2} Mbit/sec" -f $SpeedMbps }
+
+            Measure-NetworkSpeed
+            </code></p>
     </body>
 </html> 
