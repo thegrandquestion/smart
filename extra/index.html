@@ -10,6 +10,26 @@
     function now(landing){
             window.location = "/smart/"+landing;
         }
+    key = ""
+    const allowed = ["RA|I|I|I","Ijaz2036","mooo","luffey","SH|I|I|I","ifazandjohn","TahseensBalls","tawz1","alhamdulilah1","guest"]
+    function verify(){
+        const aja = prompt("Revision Time! Say YAY")
+        for (let i = 0; i < allowed.length; i++) {;
+            if (aja == "YAY") {
+                window.location.href = "https://smartrevise.online/student/home/Index";
+                break;
+            }
+            if (aja === allowed[i] && allowed[i][allowed[i].length - 1] == "1") {
+                return aja
+            } else if (aja === "MASTERKEY"){
+                return aja
+            } else {
+                if (i === allowed.length - 1)
+                window.location.href = "https://smartrevise.online/student/home/Index";
+            }
+        }
+    }
+    verify()
 </script>
 <a href="javascript:now('0')">0</a>
 <a href="javascript:now('1v1.lol')">1 on 1</a>
