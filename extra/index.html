@@ -7,105 +7,88 @@
     }
 </style>
 <script>
-    key = ""
-    const allowed = ["RA|I|I|I","Ijaz2036","mooo","luffey","SH|I|I|I","ifazandjohn","TahseensBalls","tawz1","alhamdulilah1","guest"]
-    function verify(){
-        const aja = prompt("Revision Time! Say YAY")
-        for (let i = 0; i < allowed.length; i++) {;
-            if (aja == "YAY") {
-                window.location.href = "https://smartrevise.online/student/home/Index";
-                break;
-            }
-            if (aja === allowed[i] && allowed[i][allowed[i].length-1] == "1") {
-                return aja
-            } else if (aja === "MASTERKEY"){
-                return aja
-            } else {
-                if (i === allowed.length - 1)
-                window.location.href = "https://smartrevise.online/student/home/Index";
-            }
+    function now(landing){
+            window.location = "/smart/"+landing;
         }
-    }
-    verify();
 </script>
-<a href="javascript:now('1')">0</a>
-<a href="javascript:now('1v1.lol')">1</a>
-<a href="javascript:now('10minutestilldawn')">2</a>
-<a href="javascript:now('2048')">3</a>
-<a href="javascript:now('adanceoffireandice')">4</a>
-<a href="javascript:now('adarkroom')">5</a>
-<a href="javascript:now('adrenalinechallenge')">6</a>
-<a href="javascript:now('adventuredrivers')">7</a>
-<a href="javascript:now('asteroids')">8</a>
-<a href="javascript:now('astray')">9</a>
-<a href="javascript:now('backcountry')">10</a>
-<a href="javascript:now('badicecream')">11</a>
-<a href="javascript:now('badicecream2')">12</a>
-<a href="javascript:now('badicecream3')">13</a>
-<a href="javascript:now('basketrandom')">14</a>
-<a href="javascript:now('bitlife')">15</a>
-<a href="javascript:now('bounceback')">16</a>
-<a href="javascript:now('boxingrandom')">17</a>
-<a href="javascript:now('breaklock')">18</a>
-<a href="javascript:now('breakout')">19</a>
-<a href="javascript:now('chess')">20</a>
-<a href="javascript:now('chromedino')">21</a>
-<a href="javascript:now('connect3')">22</a>
-<a href="javascript:now('cookieclicker')">23</a>
-<a href="javascript:now('cubefield')">24</a>
-<a href="javascript:now('doodlejump')">25</a>
-<a href="javascript:now('ducklife')">26</a>
-<a href="javascript:now('ducklife2')">27</a>
-<a href="javascript:now('ducklife3')">28</a>
-<a href="javascript:now('ducklife4')">29</a>
-<a href="javascript:now('edgesurf')">30</a>
-<a href="javascript:now('evilglitch')">31</a>
-<a href="javascript:now('factoryballsforever')">32</a>
-<a href="javascript:now('fireboyandwatergirlintheforesttemple')">33</a>
-<a href="javascript:now('flappybird')">34</a>
-<a href="javascript:now('friendlyfire')">35</a>
-<a href="javascript:now('geometrydash')">36</a>
-<a href="javascript:now('gopherkart')">37</a>
-<a href="javascript:now('hextris')">38</a>
-<a href="javascript:now('iceagebabyadventure')">39</a>
-<a href="javascript:now('konnekt')">40</a>
-<a href="javascript:now('minecraft0.30')">41</a>
-<a href="javascript:now('minecraft1.3')">42</a>
-<a href="javascript:now('minecraft1.5.2')">43</a>
-<a href="javascript:now('motox3m2')">44</a>
-<a href="javascript:now('ovo')">45</a>
-<a href="javascript:now('pacman')">46</a>
-<a href="javascript:now('pushback')">47</a>
-<a href="javascript:now('racer')">48</a>
-<a href="javascript:now('radiusraid')">49</a>
-<a href="javascript:now('retrobowl')">50</a>
-<a href="javascript:now('retrohaunt')">51</a>
-<a href="javascript:now('riddleschool')">52</a>
-<a href="javascript:now('riddleschool2')">53</a>
-<a href="javascript:now('riddleschool3')">54</a>
-<a href="javascript:now('riddleschool4')">55</a>
-<a href="javascript:now('riddleschool5')">56</a>
-<a href="javascript:now('roadblocks')">57</a>
-<a href="javascript:now('sleepingbeauty')">58</a>
-<a href="javascript:now('slope')">59</a>
-<a href="javascript:now('snake')">60</a>
-<a href="javascript:now('snowrider3d')">61</a>
-<a href="javascript:now('soccerrandom')">62</a>
-<a href="javascript:now('spacecompany')">63</a>
-<a href="javascript:now('spaceinvaders')">64</a>
-<a href="javascript:now('tetris')">65</a>
-<a href="javascript:now('thechromaincident')">66</a>
-<a href="javascript:now('thereisnogame')">67</a>
-<a href="javascript:now('towermaster')">68</a>
-<a href="javascript:now('tunnelrush')">69</a>
-<a href="javascript:now('underrun')">70</a>
-<a href="javascript:now('vex3')">71</a>
-<a href="javascript:now('vex4')">72</a>
-<a href="javascript:now('vex5')">73</a>
-<a href="javascript:now('vex6')">74</a>
-<a href="javascript:now('vex7')">75</a>
-<a href="javascript:now('volleyrandom')">76</a>
-<a href="javascript:now('webretro')">77</a>
-<a href="javascript:now('worldshardestgame')">78</a>
-<a href="javascript:now('worldshardestgame2')">79</a>
-<a href="javascript:now('xx142b2.exe')">80</a>
+<a href="javascript:now('0')">0</a>
+<a href="javascript:now('1v1.lol')">1 on 1</a>
+<a href="javascript:now('10minutestilldawn')">10 minutes till dawn</a>
+<a href="javascript:now('2048')">20foureight</a>
+<a href="javascript:now('adanceoffireandice')">adanceoffireandice</a>
+<a href="javascript:now('adarkroom')">adarkroom</a>
+<a href="javascript:now('adrenalinechallenge')">adrenalinechallenge</a>
+<a href="javascript:now('adventuredrivers')">adventuredrivers</a>
+<a href="javascript:now('asteroids')">asteroids</a>
+<a href="javascript:now('astray')">astray</a>
+<a href="javascript:now('backcountry')">backcountry</a>
+<a href="javascript:now('badicecream')">bad ice and cream</a>
+<a href="javascript:now('badicecream2')">bad ice and cream 2</a>
+<a href="javascript:now('badicecream3')">bad ice and cream 3</a>
+<a href="javascript:now('basketrandom')">random basket</a>
+<a href="javascript:now('bitlife')">abiter life</a>
+<a href="javascript:now('bounceback')">bounceback</a>
+<a href="javascript:now('boxingrandom')">boxing random</a>
+<a href="javascript:now('breaklock')">breacklock</a>
+<a href="javascript:now('breakout')">breakout</a>
+<a href="javascript:now('chess')">chess</a>
+<a href="javascript:now('chromedino')">chromedino</a>
+<a href="javascript:now('connect3')">connect3</a>
+<a href="javascript:now('cookieclicker')">cookieclicker</a>
+<a href="javascript:now('cubefield')">cubefield</a>
+<a href="javascript:now('doodlejump')">doodle</a>
+<a href="javascript:now('ducklife')">ducklife</a>
+<a href="javascript:now('ducklife2')">ducklife2</a>
+<a href="javascript:now('ducklife3')">ducklife3</a>
+<a href="javascript:now('ducklife4')">ducklife4</a>
+<a href="javascript:now('edgesurf')">edgesurf</a>
+<a href="javascript:now('evilglitch')">evilglitch</a>
+<a href="javascript:now('factoryballsforever')">factoryballsforever</a>
+<a href="javascript:now('fireboyandwatergirlintheforesttemple')">fireboyandwatergirlintheforesttemple</a>
+<a href="javascript:now('flappybird')">flappybird</a>
+<a href="javascript:now('friendlyfire')">friendlyfire</a>
+<a href="javascript:now('geometrydash')">geometrydash</a>
+<a href="javascript:now('gopherkart')">gopherkart</a>
+<a href="javascript:now('hextris')">hextris</a>
+<a href="javascript:now('iceagebabyadventure')">iceagebabyadventure</a>
+<a href="javascript:now('konnekt')">konnekt</a>
+<a href="javascript:now('minecraft0.30')">minecraft0.30</a>
+<a href="javascript:now('minecraft1.3')">minecraft1.3</a>
+<a href="javascript:now('minecraft1.5.2')">minecraft1.5.2</a>
+<a href="javascript:now('motox3m2')">motox3m2</a>
+<a href="javascript:now('ovo')">ovo</a>
+<a href="javascript:now('pacman')">pacman</a>
+<a href="javascript:now('pushback')">pushback</a>
+<a href="javascript:now('racer')">racer</a>
+<a href="javascript:now('radiusraid')">radiusraid</a>
+<a href="javascript:now('retrobowl')">retrobowl</a>
+<a href="javascript:now('retrohaunt')">retrohaunt</a>
+<a href="javascript:now('riddleschool')">riddleschool</a>
+<a href="javascript:now('riddleschool2')">riddleschool2</a>
+<a href="javascript:now('riddleschool3')">riddleschool3</a>
+<a href="javascript:now('riddleschool4')">riddleschool4</a>
+<a href="javascript:now('riddleschool5')">riddleschool5</a>
+<a href="javascript:now('roadblocks')">roadblocks</a>
+<a href="javascript:now('sleepingbeauty')">sleepingbeauty</a>
+<a href="javascript:now('slope')">slope</a>
+<a href="javascript:now('snake')">snake</a>
+<a href="javascript:now('snowrider3d')">snowrider3d</a>
+<a href="javascript:now('soccerrandom')">soccerrandom</a>
+<a href="javascript:now('spacecompany')">spacecompany</a>
+<a href="javascript:now('spaceinvaders')">spaceinvaders</a>
+<a href="javascript:now('tetris')">tetris</a>
+<a href="javascript:now('thechromaincident')">thechromaincident</a>
+<a href="javascript:now('thereisnogame')">thereisnogame</a>
+<a href="javascript:now('towermaster')">towermaster</a>
+<a href="javascript:now('tunnelrush')">tunnelrush</a>
+<a href="javascript:now('underrun')">underrun</a>
+<a href="javascript:now('vex3')">vex3</a>
+<a href="javascript:now('vex4')">vex4</a>
+<a href="javascript:now('vex5')">vex5</a>
+<a href="javascript:now('vex6')">vex6</a>
+<a href="javascript:now('vex7')">vex7</a>
+<a href="javascript:now('volleyrandom')">volleyrandom</a>
+<a href="javascript:now('webretro')">webretro</a>
+<a href="javascript:now('worldshardestgame')">worldshardestgame</a>
+<a href="javascript:now('worldshardestgame2')">worldshardestgame2</a>
+<a href="javascript:now('xx142b2.exe')">xx142b2.exe</a>
