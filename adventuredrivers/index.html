@@ -240,6 +240,25 @@
     </style>
   </head>
   <body>
+    <script src="../all.js"></script>
+    <script>
+      function yes() {
+        var yesjohn = getCookieValue("ThanksMan");
+        if (yesjohn !== null) {
+          for (let i = 0; i < allowed.length - 1; i++){
+            if (yesjohn === rot13(allowed[i])){
+              return 1
+            } 
+          }
+          alert("Premium Cost 3 Mirinda Straberries") 
+          window.location = "https://smartrevise.online/student/home/Index";
+        } else {
+          alert("Premium costs 3 Mirinda Straberries")
+          window.location = "https://smartrevise.online/student/home/Index";
+        }
+      }
+      yes()
+    </script>
     <canvas id="gamecanvas" draggable="false" width="640" height="360" style="touch-action: none; width: 640px; height: 360px; cursor: inherit;"></canvas>
     <script src="AdventureDrivers.min.js" type="text/javascript"></script>
   </body>

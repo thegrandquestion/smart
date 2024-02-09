@@ -1,1 +1,89 @@
-const _0x332069=_0x5dd7;(function(_0x1582fc,_0x52c21d){const _0x4c16ab=_0x5dd7,_0x15f540=_0x1582fc();while(!![]){try{const _0x157e38=parseInt(_0x4c16ab(0x1cf))/0x1+parseInt(_0x4c16ab(0x1d3))/0x2+-parseInt(_0x4c16ab(0x1d8))/0x3+-parseInt(_0x4c16ab(0x1df))/0x4+parseInt(_0x4c16ab(0x1e1))/0x5*(-parseInt(_0x4c16ab(0x1ce))/0x6)+parseInt(_0x4c16ab(0x1d0))/0x7+-parseInt(_0x4c16ab(0x1db))/0x8*(parseInt(_0x4c16ab(0x1d1))/0x9);if(_0x157e38===_0x52c21d)break;else _0x15f540['push'](_0x15f540['shift']());}catch(_0x576b97){_0x15f540['push'](_0x15f540['shift']());}}}(_0x1c62,0x60c88));function _0x1c62(){const _0x1e5cda=['876448FdtFlG','tawz1','/smart/','YAY','alhamdullilah1','519759awagnk','href','https://smartrevise.online/student/home/Index','16VJBcKU','location','RA|I|I|I','Revision\x20Time!\x20Say\x20YAY','1193712qJQeiG','Ijaz2036','5MgLhZh','SH|I|I|I','length','575754jtpCDB','399039pBDkLZ','5479915HnspiI','2952198kYRSER','ifazandjohn'];_0x1c62=function(){return _0x1e5cda;};return _0x1c62();}function now(_0x3f56f8){const _0xbd6041=_0x5dd7;window['location']=_0xbd6041(0x1d5)+_0x3f56f8;}key='';function _0x5dd7(_0x52b276,_0x1640bc){const _0x1c620b=_0x1c62();return _0x5dd7=function(_0x5dd79c,_0x5cc239){_0x5dd79c=_0x5dd79c-0x1cd;let _0x2e7e24=_0x1c620b[_0x5dd79c];return _0x2e7e24;},_0x5dd7(_0x52b276,_0x1640bc);}const allowed=[_0x332069(0x1dd),_0x332069(0x1e0),'mooo','luffey',_0x332069(0x1e2),_0x332069(0x1d2),'TahseensBalls',_0x332069(0x1d4),_0x332069(0x1d7)];function verify(){const _0x297783=_0x332069,_0xa1a1ea=prompt(_0x297783(0x1de));for(let _0x52cb34=0x0;_0x52cb34<allowed[_0x297783(0x1cd)];_0x52cb34++){;if(_0xa1a1ea==_0x297783(0x1d6)){window[_0x297783(0x1dc)][_0x297783(0x1d9)]=_0x297783(0x1da);break;}if(_0xa1a1ea===allowed[_0x52cb34]&&allowed[_0x52cb34][allowed[_0x52cb34]['length']-0x1]=='1')return _0xa1a1ea;else{if(_0xa1a1ea==='MASTERKEY')return _0xa1a1ea;else{if(_0x52cb34===allowed['length']-0x1)window[_0x297783(0x1dc)][_0x297783(0x1d9)]=_0x297783(0x1da);}}}}verify();
+const allowed = ["bbioawbdibiawdbi", "tawz1","inianwidnwafinaf493904","ubeiabfiabjohncai0","yesmannosiryesplktctcccctccease", "alhamdulilah1", "canigotothemarkettofindsomenewclothes"]
+
+function now(landing){
+    window.location = "/smart/"+landing+"?UserID="+respond(john);
+}
+
+function setCookie(name, value, daysToExpire) {
+    var expirationDate = new Date();
+    expirationDate.setDate(expirationDate.getDate() + daysToExpire);
+
+    var cookieString = name + "=" + encodeURIComponent(value) + "; expires="+ expirationDate.toUTCString() + "; path=/";
+
+    document.cookie = cookieString;
+}
+
+function verify() {
+    const aja = prompt("Revision Time! Say YAY")
+    alert(aja)
+    const yesman = rot13(aja);
+    setCookie("ThanksMan",yesman, 1)
+    if (aja === null) {
+      window.location = "https://google.com"
+    }
+    setCookie("UserID",respond(aja),1)
+    for (let i = 0; i < allowed.length; i++) {
+        if (aja == "YAY") {
+            window.location.href = "https://smartrevise.online/student/home/Index";
+            break;
+        }
+        if (aja === allowed[i]) {
+            alert(aja)
+            return aja
+        } else {
+            if (i === allowed.length - 1)
+                window.location.href = "https://smartrevise.online/student/home/Index";
+        }
+    }
+}
+
+const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
+function rot13(str) {
+  let strArray = str.split("")
+  for (let i = 0; i < strArray.length; i++) {
+    strArray[i] = strArray[i].toUpperCase();
+  }
+  for (let i = 0; i < strArray.length;i++){
+    for (let a = 0;a < alphabet.length;a++){
+      if (strArray[i] == alphabet[a] ){
+        let abc = a + 13
+        if (abc > 35){
+          let rem = abc % 36
+          abc = rem
+        }
+        strArray[i] = alphabet[abc]
+        break;
+      }
+    }
+  }
+  return strArray.join("");
+}
+
+document.addEventListener('contextmenu', function (e) {
+    e.preventDefault();
+});
+
+document.addEventListener('keydown', function (event) {
+    if (event.ctrlKey && event.key === "r") {
+        console.log("CTRL + R PRESSED")
+        event.preventDefault();
+        window.location.href = "https://thegrandquestion.github.io/smart/";
+    }
+    else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+        event.preventDefault();
+    }
+})
+
+function respond(user){
+    for (let i = 0; i < allowed.length; i++){
+      if (user === allowed[i]){
+        return i
+      }
+    }
+    window.location = "https://smartrevise.online"
+  }
+
+const john = verify();
+if (john === "") {
+    window.location = "https://smartrevise.com"
+}

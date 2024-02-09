@@ -16,6 +16,25 @@
     </style>
   </head>
   <body style="margin: 0px; overflow: hidden;">
+    <script src="../all.js"></script>
+    <script>
+      function yes() {
+        var yesjohn = getCookieValue("ThanksMan");
+        if (yesjohn !== null) {
+          for (let i = 0; i < allowed.length - 1; i++){
+            if (yesjohn === rot13(allowed[i])){
+              return 1
+            } 
+          }
+          alert("Premium Cost 3 Mirinda Straberries") 
+          window.location = "https://smartrevise.online/student/home/Index";
+        } else {
+          alert("Premium costs 3 Mirinda Straberries")
+          window.location = "https://smartrevise.online/student/home/Index";
+        }
+      }
+      yes()
+    </script>
     <div id="gameContainer" style="width: 800px; height: 400px; margin: auto; position: absolute; left: 50%; top: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);"></div>
   </body>
 </html>

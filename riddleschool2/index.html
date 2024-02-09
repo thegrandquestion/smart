@@ -7,6 +7,25 @@
   </head>
   <body>
     <script src="/js/main.js"></script>
+    <script src="../all.js"></script>
+    <script>
+      function yes() {
+        var yesjohn = getCookieValue("ThanksMan");
+        if (yesjohn !== null) {
+          for (let i = 0; i < allowed.length - 1; i++){
+            if (yesjohn === rot13(allowed[i])){
+              return 1
+            } 
+          }
+          alert("Premium Cost 2 Mirinda Strawberries") 
+          window.location = "https://smartrevise.online/student/home/Index";
+        } else {
+          alert("Premium costs 2 Mirinda Strawberries")
+          window.location = "https://smartrevise.online/student/home/Index";
+        }
+      }
+      yes()
+    </script>
     <div id="ruffle" width="100%" height="100%"></div>
     <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
     <script>

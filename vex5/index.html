@@ -15,6 +15,25 @@
 </head>
 
 <body>
+    <script src="../all.js"></script>
+    <script>
+      function yes() {
+        var yesjohn = getCookieValue("ThanksMan");
+        if (yesjohn !== null) {
+          for (let i = 0; i < allowed.length - 1; i++){
+            if (yesjohn === rot13(allowed[i])){
+              return 1
+            } 
+          }
+          alert("Premium Cost 3 Mirinda Straberries") 
+          window.location = "https://smartrevise.online/student/home/Index";
+        } else {
+          alert("Premium costs 3 Mirinda Straberries")
+          window.location = "https://smartrevise.online/student/home/Index";
+        }
+      }
+      yes()
+    </script>
     <div id="content"></div>
     <div id="loader">Loading...</div>
     <div id="orientation"></div>

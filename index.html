@@ -13,25 +13,12 @@
         <link rel="modulepreload" href="https://unpkg.com/@splinetool/viewer@1.0.34/build/spline-viewer.js">
         <title>Smart Revise</title>
     </head>
-    <script src="googleAnalytics.js"></script>
     <script>
-        const john = verify();
-        const yesman = rot13(john);
-        function setCookie(name, value, daysToExpire) {
-            var expirationDate = new Date();
-            expirationDate.setDate(expirationDate.getDate() + daysToExpire);
-
-            var cookieString = name + "=" + encodeURIComponent(value) + "; expires="+ expirationDate.toUTCString() + "; path=/";
-
-            document.cookie = cookieString;
-        }
-        setCookie("ThanksMan",yesman, 1)
-        setCookie("UserID",respond(john),1)
         function now(landing){
-            window.location = "/smart/"+landing+"?UserID="+respond(john);
+            window.location = "/smart/"+landing
         }
         document.addEventListener('contextmenu', function (e) {
-            //e.preventDefault();
+            e.preventDefault();
         });
         document.addEventListener('keydown', function (event) {
             if (event.ctrlKey && event.key === "r") {
@@ -40,7 +27,7 @@
                 window.location.href = "https://thegrandquestion.github.io/smart/";
             }
             else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
-                //event.preventDefault();
+                event.preventDefault();
             }
         })
     </script>
@@ -54,10 +41,18 @@
             color: rgb(0, 0, 0);
         }
         a {
+            border-radius: 5px;
+            border: 2px solid black;  /* Add a border style and color */
             display: inline;
             margin-right: 100px;
             margin-bottom: 50px;
             color: rgb(47, 0, 255);
+            padding: 5px 10px;  /* Add padding for better visibility */
+            text-decoration: none;  /* Remove underline from links */
+        }
+        a:hover {
+            background-color: blue;
+            color: white;
         }
         hr {
             border-color: black;    
@@ -72,11 +67,10 @@
         <a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">Mine and Craft</a>
         <a id="charlie" href="javascript:now('flappybird')">Jumpybird</a>
         <a id="delta" href="javascript:now('jenga')">Jenga</a>
-        <a id="delta" href="javascript:now('retrobowl')">Retro Bowl</a>
-        <a id="delta" href="javascript:now('2048')">8402</a>
-        <a id="delta" href="javascript:now('sirtet')">Block Stacking</a>
+        <a id="delta" href="javascript:now('fireboyandwatergirlintheforesttemple')">Fire Boy and Water Girl</a>
+        <a id="delta" href="javascript:now('worldshardestgame')">worldshardestgame</a>
         <a href="javascript:now('powershell')">Powershell Commands</a>  
-        <a href="javascript:now('extra')">Premium</a>
+        <a href="javascript:now('extra')">More Games →</a>
         <br><br><br><br><br>
         <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.38/build/spline-viewer.js"></script>
         <spline-viewer hint loading-anim-type="spinner-big-dark" url="https://prod.spline.design/B09OnL9HxGJnzu6l/scene.splinecode"></spline-viewer>
