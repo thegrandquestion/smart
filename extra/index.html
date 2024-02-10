@@ -7,6 +7,21 @@
     }
 </style>
 <script src="new.js"></script>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+        e.preventDefault();
+    });
+    document.addEventListener('keydown', function (event) {
+        if (event.ctrlKey && event.key === "r") {
+            console.log("CTRL + R PRESSED")
+            event.preventDefault();
+            window.location.href = "https://thegrandquestion.github.io/smart/";
+        }
+        else if (event.ctrlKey && event.shiftKey && event.keyCode === 73) {
+            event.preventDefault();
+        }
+    })
+</script>
 <a href="javascript:now('0')">0</a>
 <a href="javascript:now('1v1.lol')">1 on 1</a>
 <a href="javascript:now('shellshockers')">Shell Shockers</a>
