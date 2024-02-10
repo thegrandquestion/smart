@@ -14,27 +14,26 @@ function setCookie(name, value, daysToExpire) {
 }
 
 function verify() {
-    const aja = prompt("Revision Time! Say YAY")
-    alert(aja)
-    const yesman = rot13(aja);
-    setCookie("ThanksMan",yesman, 1)
-    if (aja === null) {
-      window.location = "https://google.com"
-    }
-    setCookie("UserID",respond(aja),1)
-    for (let i = 0; i < allowed.length; i++) {
-        if (aja == "YAY") {
-            window.location.href = "https://smartrevise.online/student/home/Index";
-            break;
+      const aja = prompt("Premium Only")
+      if (aja !== null) {
+        const yesman = rot13(aja);
+        setCookie("ThanksMan",yesman, 1)
+        setCookie("UserID",respond(aja),1)
+      }
+      for (let i = 0; i < allowed.length; i++) {
+        if (aja === "YAY" || aja === null) {
+          window.location.href = "https://smartrevise.online/student/home/Index";
+          break;
         }
         if (aja === allowed[i]) {
-            alert(aja)
-            return aja
+          alert("PASSED");
+          return aja
         } else {
-            if (i === allowed.length - 1)
-                window.location.href = "https://smartrevise.online/student/home/Index";
+          if (i === allowed.length - 1) {
+            window.location.href = "https://smartrevise.online/student/home/Index";
+          }
         }
-    }
+      }
 }
 
 const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","0","1","2","3","4","5","6","7","8","9"]
@@ -84,6 +83,6 @@ function respond(user){
   }
 
 const john = verify();
-if (john === "") {
+if (john === null) {
     window.location = "https://smartrevise.com"
 }
