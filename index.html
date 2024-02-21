@@ -87,18 +87,20 @@
             var currentIndex = 0;
         
             function showNextImage() {
+                document.getElementById("jonay1").style.display = "none";
                 var selectedImage = images[currentIndex];
                 document.getElementById("jonay").src = selectedImage;
         
                 // Move to the next image index
                 currentIndex = (currentIndex + 1) % images.length;
             }
-        
+            
             setInterval(showNextImage, 3000); // Call showNextImage every 3 seconds
         </script>
         <div align="center">
             <h2> ⬇️ ADVERTISEMENT BOARD: Advertise Your School Business Here for £2 per week. ⬇️</h2>
-            <img id="jonay">
+            <img id="jonay1" src="penguin.jpeg">
+            <img id="jonay" onerror="ADVERTISEMENT">
         </div>
         <script>
         window.dataLayer = window.dataLayer || [];
