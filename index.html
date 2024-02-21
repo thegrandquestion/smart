@@ -9,6 +9,7 @@
         <meta name="author" content="Johnny Mcarthur">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preload" as="image" href="shell.png">
+        <link rel="preload" as="image" href="amongus.png">
         <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,10 +49,16 @@
             border: 2px solid black;  /* Add a border style and color */
             display: inline;
             margin-right: 100px;
-            margin-top: 100px;
+            margin-bottom: 10px;
             color: rgb(47, 0, 255);
             padding: 5px 10px;  /* Add padding for better visibility */
             text-decoration: none;  /* Remove underline from links */
+        }
+        @media only screen and (max-width: 600px) {
+            a {
+                margin-right: 10px; /* Adjust margin for smaller screens */
+                margin-top: 10px;   /* Adjust margin for smaller screens */
+            }
         }
         a:hover {
             background-color: blue;
@@ -69,16 +76,29 @@
         <a id="johny" href="javascript:now('revise')">One on one</a>
         <a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">Mine and Craft</a>
         <a id="charlie" href="javascript:now('flappybird')">Jumpybird</a>
-        <a id="delta" href="javascript:now('jenga')">Jenga</a>
+        <a id="delta" href="javascript:now('underrun')">UNDERRUN</a>
         <a id="delta" href="javascript:now('fireboyandwatergirlintheforesttemple')">Fire Boy and Water Girl</a>
         <a id="delta" href="javascript:now('worldshardestgame')">worldshardestgame</a>
         <a href="javascript:now('powershell')">Powershell Commands</a>  
         <a href="javascript:now('extra')">More Games →</a>
         <br><br><br><br><br>
+        <script>
+            var images = ["shell.png", "amongus.png","underrun.png","tunnelrushgame.png"];
+            var currentIndex = 0;
+        
+            function showNextImage() {
+                var selectedImage = images[currentIndex];
+                document.getElementById("jonay").src = selectedImage;
+        
+                // Move to the next image index
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+        
+            setInterval(showNextImage, 3000); // Call showNextImage every 3 seconds
+        </script>
         <div align="center">
-            <h2>SHELLSHOCKERS IN PREMIUM</h2>
-            <img src="shell.png">
-            <h2 style="background-color: black; color: white;">↑ Advertise Your School Business Here For £2/week ↑</h2>
+            <h2> ⬇️ ADVERTISEMENT BOARD: Advertise Your School Business Here for £2 per week. ⬇️</h2>
+            <img id="jonay">
         </div>
         <script>
         window.dataLayer = window.dataLayer || [];
