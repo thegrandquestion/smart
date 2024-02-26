@@ -43,11 +43,32 @@
         input {
            margin-bottom: 10px;    
         }
-        body {
-            background-image: url(minecrafttwo.png);
-            overflow:hidden;
-            background-color: #ffffff;
-            color: rgb(0, 0, 0);
+        body, html {
+            height: 100%;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1; /* Ensure the video is rendered behind other content */
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .content {
+            position: relative;
+            z-index: 1; /* Place your content above the video */
+            /* Additional styling for your content goes here */
         }
         a {
             border-radius: 5px;
@@ -73,49 +94,58 @@
             border-color: black;    
         }
     </style>
-        <div align="center">
-            <font size="6">To the IT Department: Don't close this website because we'll just make another one!</font><br>
-            <font size="3">cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</font><br>
+        <div class="video-container">
+            <video autoplay muted loop id="background-video">
+                <source src="thejohn.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <!-- Your other content goes here -->
         </div>
-        <hr>
-        <a id="johny" href="javascript:now('revise')">One on one</a>
-        <a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">Mine and Craft</a>
-        <a id="charlie" href="javascript:now('flappybird')">Jumpybird</a>
-        <a id="delta" href="javascript:now('underrun')">UNDERRUN</a>
-        <a id="delta" href="javascript:now('fireboyandwatergirlintheforesttemple')">Fire Boy and Water Girl</a>
-        <a id="delta" href="javascript:now('worldshardestgame')">worldshardestgame</a>
-        <a href="javascript:now('powershell')">Powershell Commands</a>  
-        <a href="javascript:now('extra')">More Games →</a>
-        <br><br><br><br><br>
-        <script>
-            var images = ["smart/shell.png", "smart/amongus.png","smart/underrun.png","smart/tunnelrushgame.png"];
-            var currentIndex = 0;
-        
-            function showNextImage() {
-                document.getElementById("jonay1").style.display = "none";
-                var selectedImage = images[currentIndex];
-                document.getElementById("jonay").src = selectedImage;
-        
-                // Move to the next image index
-                currentIndex = (currentIndex + 1) % images.length;
-            }
+        <div id="content">
+            <div align="center">
+                <font size="6">To the IT Department: Don't close this website because we'll just make another one!</font><br>
+                <font size="3">cosmos17hhszr5usz8uqg3hj8sec692v4w08smdtekk5c</font><br>
+            </div>
+            <hr>
+            <a id="johny" href="javascript:now('revise')">One on one</a>
+            <a id="bobby" href="javascript:now('mine/IIlIIIlIIlI.html')">Mine and Craft</a>
+            <a id="charlie" href="javascript:now('flappybird')">Jumpybird</a>
+            <a id="delta" href="javascript:now('underrun')">UNDERRUN</a>
+            <a id="delta" href="javascript:now('fireboyandwatergirlintheforesttemple')">Fire Boy and Water Girl</a>
+            <a id="delta" href="javascript:now('worldshardestgame')">worldshardestgame</a>
+            <a href="javascript:now('powershell')">Powershell Commands</a>  
+            <a href="javascript:now('extra')">More Games →</a>
+            <br><br><br><br><br>
+            <script>
+                var images = ["smart/shell.png", "smart/amongus.png","smart/underrun.png","smart/tunnelrushgame.png"];
+                var currentIndex = 0;
             
-            setInterval(showNextImage, 3000); // Call showNextImage every 3 seconds
-        </script>
-        <div align="center">
-            <h2> ⬇️ ADVERTISEMENT BOARD: Advertise Your School Business Here for £2 per week. ⬇️</h2>
-            <img id="jonay1" src="penguin.jpeg">
-            <img id="jonay" onerror="ADVERTISEMENT">
+                function showNextImage() {
+                    document.getElementById("jonay1").style.display = "none";
+                    var selectedImage = images[currentIndex];
+                    document.getElementById("jonay").src = selectedImage;
+            
+                    // Move to the next image index
+                    currentIndex = (currentIndex + 1) % images.length;
+                }
+                
+                setInterval(showNextImage, 3000); // Call showNextImage every 3 seconds
+            </script>
+            <div align="center">
+                <h2> ⬇️ ADVERTISEMENT BOARD: Advertise Your School Business Here for £2 per week. ⬇️</h2>
+                <img id="jonay1" src="penguin.jpeg">
+                <img id="jonay" onerror="ADVERTISEMENT">
 
+            </div>
+            <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-2RK0ZRQYER');
+            </script>
+            <script>
+                history.pushState({}, null, '/abracadabra'); //Google Analytics
+            </script>
         </div>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-2RK0ZRQYER');
-    </script>
-    <script>
-        history.pushState({}, null, '/abracadabra'); //Google Analytics
-    </script>
 </html>
