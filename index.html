@@ -138,21 +138,12 @@
 
             </div>
             <script>
-                // Get the video element
                 var video = document.getElementById("background-video");
+                var content = document.querySelector(".content");
 
-                // Add an event listener for the 'ended' event
-                video.addEventListener("ended", function() {
-                    // Set the playback rate to -1 to play in reverse
-                    video.playbackRate = -0.4;
-                    
-                    // Rewind to the end of the video
-                    video.currentTime = video.duration;
-                    
-                    // Play the video in reverse
+                video.addEventListener("canplaythrough", function() {
                     video.play();
                 });
-
                 // Add an event listener for the 'playing' event
                 video.addEventListener("playing", function() {
                     // Reset the playback rate to normal speed
